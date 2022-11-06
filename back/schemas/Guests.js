@@ -1,6 +1,6 @@
 export default {
-  name: 'guest',
-  title: 'Guest',
+  name: 'guests',
+  title: 'Guests',
   type: 'document',
 
   fields: [
@@ -22,6 +22,14 @@ export default {
         source: (doc) => doc.firstName + ' ' + doc.lastName,
         maxLength: 96,
       },
+    },
+    {
+      name: 'password',
+      title: 'Password',
+      type: 'slug',
+      options: {
+        source: (doc) => doc.firstName + new Date().getTime(),
+    },
     },
     {
       name: 'childrens',
