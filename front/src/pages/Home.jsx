@@ -14,31 +14,13 @@ const Home = () => {
       .catch(console.error);
   }, []);
 
+  console.log(guest);
+  console.log(data);
+  console.log(setData);
 
-
-
-
-
- 
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
- 
-  
   return (
     <div>
-      <h1>Guests</h1>
+     home
      
       
     </div>
