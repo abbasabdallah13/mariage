@@ -60,16 +60,18 @@ take a look at the DB to understand a bit more .
 6. Comment code.
 
 ## To be done
-Need to get the items from the db (guest) for now only getting the guests.
-(Julien) will change the DB content Name for guests and not guest , so we don't get confused (not hard but i need to make the guestList from scratch)
-When we fetch properly we can move the fetch to data.js 
+Need to get the items from the db (guest) for now only getting the guests.  
+When we fetch properly we can move the fetch to data.js.  
 Need to start the css for the login page and when we finally get the guest from guests we can set the logging (need to get username and password from db.
 
 
 ## Done 
-Back end set with Sanity. will be improve as we move.
-Front connected to sanity , getting the Guest from the DB.
-Login page created
+Back end set with Sanity. will be improve as we move.  
+Front connected to sanity , getting the Guest from the DB.  
+Login page created.  
+DB content Name changed to guests instead of guest.  
+Created all the guests info in db.  
+Added password slug to the guests in the back auto generating. Added pictures for the login pages.  
 
 
 ## Design 
