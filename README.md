@@ -110,6 +110,9 @@ Take a look at the DB to understand a bit more.
 - Created all the guests info in db.
 - Added password slug to the guests in the back auto generating. Added pictures for the login pages.
 
+## what are you working on ? 
+Julien : working on the login page integration of login using the username and password in db 
+
 ## Design
 
 - Login page
