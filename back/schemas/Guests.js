@@ -19,7 +19,8 @@ export default {
       title: 'UserName',
       type: 'slug',
       options: {
-        source: (doc) => doc.firstName + ' ' + doc.lastName,
+        source: (doc) =>
+          lastName ? doc.firstName + ' ' + doc.lastName : doc.firstName,
         maxLength: 96,
       },
     },
@@ -29,7 +30,7 @@ export default {
       type: 'slug',
       options: {
         source: (doc) => doc.firstName + new Date().getTime(),
-    },
+      },
     },
     {
       name: 'childrens',
