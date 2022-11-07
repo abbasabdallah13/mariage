@@ -5,18 +5,17 @@ import { client } from "../client";
 
 
 const Home = () => {
-  const [data, setData] = useState(null);
-  const [guest, setGuest] = useState(null);
+  const [guests, setGuests] = useState(null);
   useEffect(() => {
     client
-      .fetch(`*[_type == "guest"]`)
-      .then((guest) => setGuest(guest))
+      .fetch(`*[_type == "guests"]`)
+      .then((guests) => setGuests(guests))
       .catch(console.error);
   }, []);
 
-  console.log(guest);
-  console.log(data);
-  console.log(setData);
+  console.log(guests);
+ 
+
 
   return (
     <div>
