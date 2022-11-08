@@ -95,11 +95,37 @@ Take a look at the DB to understand a bit more.
 5. Try to improve and keep this ReadMe updated.
 6. Comment code.
 
-## To be done
+## Help
 
-- Need to get the items from the db (guest) for now only getting the guests.
-- When we fetch properly we can move the fetch to data.js.
-- Need to start the css for the login page and when we finally get the guest from guests we can set the logging (need to get username and password from db.
+### gitCommand
+
+1. <PUSH> In your vscode
+
+- git add . 
+- git commit -m 'something you changed'
+- git push
+
+2. <MERGE> In your github
+
+- Make pull request (with code review etc.)
+- When you get appoved, merge it 
+- delete merged branch
+
+3. <DELETE AND START AGAIN> In your vscode
+
+- git checkout main
+- git branch (should display main and your branch + you are now in main)
+- git branch -D branchName
+- git branch (should display only main + you are now in main)
+- git pull (it will pull all new version of main + you are now in main)
+- git checkout -b newBranchName (you are now in your new branch)
+
+
+## To Do
+
+- Need to do the CSS for the Login page (SEE TEMPLATE DOWN THE PAGE)
+- Need to organise the fetch in data.js
+- One error need fix in Logging page when the username does not exist
 
 ## Done
 
@@ -109,9 +135,11 @@ Take a look at the DB to understand a bit more.
 - DB content Name changed to guests instead of guest.
 - Created all the guests info in db.
 - Added password slug to the guests in the back auto generating. Added pictures for the login pages.
+- The Logging page is done for the fonctionality (1 error)
+- The DDAY is done
 
 ## what are you working on ? 
-Julien : working on the login page integration of login using the username and password in db 
+Julien : standby EOD
 
 ## Design
 

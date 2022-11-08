@@ -56,7 +56,7 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button block size='lg' type='submit'>
+        <Button block='true' size='lg' type='submit'>
           Login
         </Button>
       </Form>
