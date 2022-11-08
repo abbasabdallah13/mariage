@@ -4,10 +4,11 @@ Development of a GuestsList organizer.
 The guest will receive the link for the web app with a Username and Password.  
 After clicking the link the guest will be on the main page (login page).
 
-<br>
+
 <br>
 
-### `Content of Login page`
+
+## Contents of Login page
 
 - Title ( names of couple )
 - Introduction Text
@@ -18,10 +19,11 @@ After clicking the link the guest will be on the main page (login page).
 
 After the guest logged in he will be navigated to the main page ( Questions ).
 
-<br>
+
 <br>
 
-### `Questions`
+
+## Questions
 
 - Question 1 : Attending
 
@@ -68,15 +70,13 @@ After the guest logged in he will be navigated to the main page ( Questions ).
   if they take this option, send the hotel info
   ```
 
-<br>
-<br>
+- `Questions are depending on the Guests.`
 
-### `Questions are depending on the Guests.`
+  All guests will have differente questions (path), all informations for the guests are stored in DataBase.<br>
+  So the front need to dynamically set guests path. <br>
+  Take a look at the DB to understand a bit more.
 
-All guests will have differente questions (path), all informations for the guests are stored in DataBase. So the front need to dynamically set guests path. <br>
-Take a look at the DB to understand a bit more.
-
-<img height="300" alt="Capture d’écran 2022-11-06 à 21 53 39" src="https://user-images.githubusercontent.com/104718280/200194691-d01dc231-bdc4-48f8-a402-afb85a62b782.png">
+  <img height="300" alt="Capture d’écran 2022-11-06 à 21 53 39" src="https://user-images.githubusercontent.com/104718280/200194691-d01dc231-bdc4-48f8-a402-afb85a62b782.png">
 
 <br>
 <br>
@@ -95,37 +95,13 @@ Take a look at the DB to understand a bit more.
 5. Try to improve and keep this ReadMe updated.
 6. Comment code.
 
-## Help
-
-### gitCommand
-
-1. <PUSH> In your vscode
-
-- git add . 
-- git commit -m 'something you changed'
-- git push
-
-2. <MERGE> In your github
-
-- Make pull request (with code review etc.)
-- When you get appoved, merge it 
-- delete merged branch
-
-3. <DELETE AND START AGAIN> In your vscode
-
-- git checkout main
-- git branch (should display main and your branch + you are now in main)
-- git branch -D branchName
-- git branch (should display only main + you are now in main)
-- git pull (it will pull all new version of main + you are now in main)
-- git checkout -b newBranchName (you are now in your new branch)
-
-
 ## To Do
 
-- Started the css for loginpage , need to improve it 
 - Need to organise the fetch in data.js
 - One error need fix in Logging page when the username does not exist
+
+## In Progress
+- CSS for login page, need to improve
 
 ## Done
 
@@ -143,8 +119,33 @@ Julien : standby EOD
 
 ## Design
 
-- Login page
+- Web - Login page
 
   <img height="500" alt="Capture d’écran 2022-11-06 à 21 53 39" src="https://user-images.githubusercontent.com/104718280/200194975-902b15eb-0d95-4b84-9363-e397f57ab52d.png">
 
-- Login page Mobile
+- Mobile - Login page
+
+## Useful info - git commands
+
+1. <PUSH> In your vscode
+
+- git add . 
+- git commit -m 'something you changed'
+- git push
+
+2. <MERGE> In your github
+
+- When you achieved some tasks (i.e. features, refactors, etc.)
+- Make pull request (with code review etc.)
+- When you get appoved, merge it 
+- delete merged branch
+
+3. <DELETE AND START AGAIN> In your vscode
+
+- git checkout main
+- git branch (should display main and your branch + you are now in main)
+- git branch -D branchName
+- git branch (should display only main + you are now in main)
+- git pull (it will pull all new version of main + you are now in main)
+- git checkout -b newBranchName (you are now in your new branch)
+
