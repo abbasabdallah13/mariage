@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
-import { client } from '../client';
+import { client } from '../../client';
+import "./index.scss";
 
 export default function Login() {
   const [guests, setGuests] = useState(null);
@@ -22,9 +23,6 @@ export default function Login() {
       .catch(console.error);
   }, []);
 
-  // map over guests and get userName and password
-  console.log(guests);
-
   function handleSubmit(event) {
     event.preventDefault();
     let guest = guests.find(
@@ -37,22 +35,22 @@ export default function Login() {
   }
 
   return (
-    <div className='Login'>
-      <Form onSubmit={handleSubmit}>
+    <>
+      <Form onSubmit={handleSubmit} className='form'>
         <Form.Group size='lg' controlId='userName'>
-          <Form.Label>Username</Form.Label>
           <Form.Control
             autoFocus
             type='text'
             value={userName}
+            placeholder='Username'
             onChange={(e) => setUserName(e.target.value)}
           />
         </Form.Group>
         <Form.Group size='lg' controlId='password'>
-          <Form.Label>Password</Form.Label>
           <Form.Control
             type='password'
             value={password}
+            placeholder='Password'
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
@@ -60,6 +58,6 @@ export default function Login() {
           Login
         </Button>
       </Form>
-    </div>
+    </>
   );
 }
