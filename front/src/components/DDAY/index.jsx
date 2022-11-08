@@ -1,9 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import "./index.scss";
 
 // we use a state to store the countdown values to 0 by default
 const DDay = () => {
-  const [countdown, setCountdown] = useState({ 
+  const [countdown, setCountdown] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
@@ -12,7 +13,6 @@ const DDay = () => {
 
   // we set the date of the wedding
   const [date] = useState(new Date("May 20, 2023 10:00:00").getTime());
-
 
   const updateCountdown = () => {
     const now = new Date().getTime(); // get the current date
@@ -26,12 +26,13 @@ const DDay = () => {
     const days = hours * 24;
 
     // we return the greatest integer less than or equal to the quotient of the two numbers
-    const textDay = Math.floor(gap / days); 
+    const textDay = Math.floor(gap / days);
     const textHour = Math.floor((gap % days) / hours);
     const textMinute = Math.floor((gap % hours) / minutes);
     const textSecond = Math.floor((gap % minutes) / seconds);
 
-    setCountdown({ // we update the state with the new values
+    setCountdown({
+      // we update the state with the new values
       days: textDay,
       hours: textHour,
       minutes: textMinute,
@@ -39,25 +40,26 @@ const DDay = () => {
     });
   };
 
-  useEffect(() => { // we use the useEffect hook to update the countdown every second
+  useEffect(() => {
+    // we use the useEffect hook to update the countdown every second
     setInterval(updateCountdown, 1000);
   }, []);
 
   const { days, hours, minutes, seconds } = countdown; // we destructure the state
 
   return (
-    <div className="border-2 border-black p-4 flex justify-between">
-      <div className="border-2 border-black h-10 p-2">
-        <div>{days}</div>
+    <div className="dDayContainer">
+      <div className="dDayContainer_Count">
+        <div className="dDayContainer_days">{days}</div>
       </div>
-      <div className="border-2 border-black h-10 p-2">
-        <div>{hours}</div>
+      <div className="dDayContainer_Count">
+        <div className="dDayContainer_hours">{hours}</div>
       </div>
-      <div className="border-2 border-black h-10 p-2">
-        <div>{minutes}</div>
+      <div className="dDayContainer_Count">
+        <div className="dDayContainer_minutes">{minutes}</div>
       </div>
-      <div className="border-2 border-black h-10 p-2">
-        <div>{seconds}</div>
+      <div className="dDayContainer_Count">
+        <div className="dDayContainer_seconds">{seconds}</div>
       </div>
     </div>
   );

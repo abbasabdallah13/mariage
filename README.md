@@ -123,7 +123,7 @@ Take a look at the DB to understand a bit more.
 
 ## To Do
 
-- Need to do the CSS for the Login page (SEE TEMPLATE DOWN THE PAGE)
+- Started the css for loginpage , need to improve it 
 - Need to organise the fetch in data.js
 - One error need fix in Logging page when the username does not exist
 
@@ -146,3 +146,5 @@ Julien : standby EOD
 - Login page
 
   <img height="500" alt="Capture d’écran 2022-11-06 à 21 53 39" src="https://user-images.githubusercontent.com/104718280/200194975-902b15eb-0d95-4b84-9363-e397f57ab52d.png">
+
+- Login page Mobile
