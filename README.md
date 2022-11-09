@@ -1,27 +1,23 @@
 # Mariage
 
 Development of a GuestsList organizer.  
-The guest will receive the link for the web app with a Username and Password.  
-After clicking the link the guest will be on the main page (login page).
-
+Guests will receive the link for the web app with a Username and Password.  
+The link will take the user to the login page.
 
 <br>
-
 
 ## Contents of Login page
 
-- Title ( names of couple )
+- Title ( names of the couple )
 - Introduction Text
 - D-DAY ( Live Timer Days hours minutes )
-- Username to enter
-- Password to enter
-- Login Button
+- Username input for login
+- Password input for login
+- Button for login
 
-After the guest logged in he will be navigated to the main page ( Questions ).
-
+Once the user logs in, they will be navigated to the main page containing Questions.
 
 <br>
-
 
 ## Questions
 
@@ -72,9 +68,10 @@ After the guest logged in he will be navigated to the main page ( Questions ).
 
 - `Questions are depending on the Guests.`
 
-  All guests will have differente questions (path), all informations for the guests are stored in DataBase.<br>
-  So the front need to dynamically set guests path. <br>
-  Take a look at the DB to understand a bit more.
+  All guests will have different questions (path).<br>
+  All information for guests is stored in DataBase.<br>
+  So front needs to be dynamically set according to the path of guests. <br>
+  Take a look at the DB to understand more.
 
   <img height="300" alt="Capture d’écran 2022-11-06 à 21 53 39" src="https://user-images.githubusercontent.com/104718280/200194691-d01dc231-bdc4-48f8-a402-afb85a62b782.png">
 
@@ -88,20 +85,21 @@ After the guest logged in he will be navigated to the main page ( Questions ).
 
 ## Instructions
 
-1. Always push on your own branch and make sure to delete the branch from VS Code/Github after merging
+1. Always push on your own branch and make sure to delete the branch on VS Code/Github after merging
 2. Before Merging on main ask for review to your collabo
 3. Try to always read this page before you start working on project .
-4. Keep good communication so we don't work on the same .
+4. Keep good communication so we don't work on the same task.
 5. Try to improve and keep this ReadMe updated.
 6. Comment code.
 
 ## To Do
 
 - Need to organise the fetch in data.js
-- Need to find a way to hash the password 
+- Need to find a way to hash the password
 - Need to start the home page (can use random question i'll fix and translate later)
 
 ## In Progress
+
 - CSS for login page, need to improve
 
 ## Done
@@ -117,7 +115,8 @@ After the guest logged in he will be navigated to the main page ( Questions ).
 - We cannot access home page from url if not logged in (security)
 - The error from login page when no user found is fixed
 
-## what are you working on ? 
+## what are you working on ?
+
 Julien : I'am going week end until sunday . Good luck.
 
 ## Design
@@ -132,7 +131,7 @@ Julien : I'am going week end until sunday . Good luck.
 
 1. <PUSH> In your vscode
 
-- git add . 
+- git add .
 - git commit -m 'something you changed'
 - git push
 
@@ -140,7 +139,7 @@ Julien : I'am going week end until sunday . Good luck.
 
 - When you achieved some tasks (i.e. features, refactors, etc.)
 - Make pull request (with code review etc.)
-- When you get appoved, merge it 
+- When you get appoved, merge it
 - delete merged branch
 
 3. <DELETE AND START AGAIN> In your vscode
@@ -151,4 +150,3 @@ Julien : I'am going week end until sunday . Good luck.
 - git branch (should display only main + you are now in main)
 - git pull (it will pull all new version of main + you are now in main)
 - git checkout -b newBranchName (you are now in your new branch)
-
