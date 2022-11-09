@@ -1,21 +1,50 @@
 .loginPage {
-  background-image: url(../../assets/mobile_background.png);
   height: 100%;
-  background-size: cover;
 
-  // &_Content {
-  // }
-  // &_Form {
-  // }
+  display: flex;
+  justify-content: end;
+  align-items: center;
 
-  p {
+  background-image: url(../../assets/LoginBackground.png);
+
+  &_Form {
+    width: 50vw;
+    height: 100vh;
+    margin: 0 10% 5rem;
+    padding: 8rem 10rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../../assets/paintSplash.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    // border: 2px solid black;
+  }
+
+  &_Content {
+    // margin: 0 4rem;
     font-family: 'Great Vibes', cursive;
   }
 
-  // h1 {
-  // }
+  h1,
+  h2,
+  p {
+    // border: 1px green solid;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
 
-  h2 {
-    font-family: 'Great Vibes', cursive;
+  @media screen and (max-width: 768px) {
+    background-image: url(../../assets/mobile_background.png);
+
+    &_Form {
+      background-image: none;
+    }
   }
 }
