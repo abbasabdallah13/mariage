@@ -26,18 +26,30 @@
     // border: 2px solid black;
   }
 
-  &_Content {
-    // margin: 0 4rem;
-    font-family: 'Great Vibes', cursive;
-  }
-
-  h1,
-  h2,
-  p {
-    // border: 1px green solid;
-    width: 100%;
+  h1 {
+    min-width: 450px;
     padding: 1rem;
     text-align: center;
+
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: 'Great Vibes', cursive;
+
+    // border: 1px green solid;
+  }
+
+  p {
+    width: 80%;
+    min-width: 382px;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: block;
+
+    text-align: center;
+    // font-family: 'Great Vibes', cursive;
+    // border: 1px green solid;
   }
 
   @media screen and (max-width: 768px) {

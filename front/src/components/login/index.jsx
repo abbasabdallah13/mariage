@@ -13,7 +13,7 @@ const Login = () => {
 
   // to make sure the userName in local storage is empty
   // when you are in login page
-  localStorage.removeItem('userName');
+  localStorage.clear();
   console.log('i am userName : ', localStorage.getItem('userName'));
 
   useEffect(() => {
@@ -21,7 +21,14 @@ const Login = () => {
       .fetch(
         `*[_type == "guests"] {
         userName,
-        password
+        password,
+        firstName,
+        childrens,
+        partner,
+        reception,
+        wineReception,
+        accommodation1night,
+        accommodation2night,
       }`
       )
       .then((guests) => setGuests(guests))
@@ -37,8 +44,16 @@ const Login = () => {
         g.password !== null &&
         g.password.current === password
     );
+
     if (guest) {
+      // if guest login properly then we store his information in local storage
       localStorage.setItem('userName', guest.userName.current);
+      localStorage.setItem('firstName', guest.firstName);
+      localStorage.setItem('childrens', guest.childrens);
+      localStorage.setItem('partner', guest.partner);
+      localStorage.setItem('reception', guest.reception);
+      localStorage.setItem('wineReception', guest.wineReception);
+
       navigate('/home');
     } else {
       alert('Wrong username or password');
@@ -56,7 +71,7 @@ const Login = () => {
             autoFocus
             type='text'
             value={userName}
-            placeholder='User name'
+            placeholder='Username'
             onChange={(e) => setUserName(e.target.value)}
           />
         </Form.Group>
