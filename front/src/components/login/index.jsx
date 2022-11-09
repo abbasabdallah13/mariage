@@ -3,13 +3,18 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 import { client } from '../../client';
-import "./index.scss";
+import './index.scss';
 
-export default function Login() {
+const Login = () => {
   const [guests, setGuests] = useState([]);
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+
+  // to make sure the userName in local storage is empty
+  // when you are in login page
+  localStorage.removeItem('userName');
+  console.log('i am userName : ', localStorage.getItem('userName'));
 
   useEffect(() => {
     client
@@ -25,18 +30,24 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let guest = guests.find(guest => (guest.userName !== null && guest.userName.current === userName) 
-    && (guest.password !== null && guest.password.current === password));
+    let guest = guests.find(
+      (g) =>
+        g.userName !== null &&
+        g.userName.current === userName &&
+        g.password !== null &&
+        g.password.current === password
+    );
     if (guest) {
       localStorage.setItem('userName', guest.userName.current);
       navigate('/home');
-    }
-    else {
+    } else {
       alert('Wrong username or password');
     }
   }
 
-console.log(guests);
+  console.log('i am guests list : ', guests);
+  console.log('i am the guest : ', localStorage.getItem('userName'));
+
   return (
     <>
       <Form onSubmit={handleSubmit} className='form'>
@@ -45,13 +56,13 @@ console.log(guests);
             autoFocus
             type='text'
             value={userName}
-            placeholder='Username'
+            placeholder='User name'
             onChange={(e) => setUserName(e.target.value)}
           />
         </Form.Group>
         <Form.Group size='lg' controlId='password'>
           <Form.Control
-          className=''
+            className=''
             type='password'
             value={password}
             placeholder='Password'
@@ -64,4 +75,6 @@ console.log(guests);
       </Form>
     </>
   );
-}
+};
+
+export default Login;

@@ -1,6 +1,6 @@
-import { useEffect} from "react";
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 // import { client } from "../client";
-import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   // const [guests, setGuests] = useState([]);
@@ -11,16 +11,17 @@ const Home = () => {
   //     .catch(console.error);
   // }, []);
 
+  // to have better readability in useEffect
+  const user = localStorage.getItem('userName');
   const navigate = useNavigate();
-  // if no user is logged in redirect to login page
-  // this allow me to secure the access to the home page from the url
-  useEffect(() => {
-    if (!localStorage.getItem("userName")) {
-      navigate("/");
-    }
-  }, [navigate]);
 
-  return <div>home</div>;
+  useEffect(() => {
+    // if no user is logged in redirect to login page
+    // this allow me to secure the access to the home page from the url
+    !user && navigate('/');
+  }, [navigate, user]);
+
+  return <div>Hi I am Home(Main page)</div>;
 };
 
 export default Home;
