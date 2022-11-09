@@ -6,7 +6,7 @@ import { client } from '../../client';
 import "./index.scss";
 
 export default function Login() {
-  const [guests, setGuests] = useState(null);
+  const [guests, setGuests] = useState([]);
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
