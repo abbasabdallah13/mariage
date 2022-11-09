@@ -51,13 +51,14 @@ console.log(guests);
         </Form.Group>
         <Form.Group size='lg' controlId='password'>
           <Form.Control
+          className=''
             type='password'
             value={password}
             placeholder='Password'
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button block='true' size='lg' type='submit'>
+        <Button block='true' size='lg' type='submit' className='glow-on-hover'>
           Login
         </Button>
       </Form>
