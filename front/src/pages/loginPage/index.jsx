@@ -8,6 +8,7 @@ const LoginPage = () => {
     <div className="loginPage">
       <div className="loginPage_Form">
         <h1>SAVE THE DATE</h1>
+        <div className='loginPage_Content'>
         <h2>Maëva & Julien</h2>
         <p>
           Nous sommes impatients de célébrer notres mariage à vos côtés le
@@ -17,7 +18,7 @@ const LoginPage = () => {
         </p>
         <DDay />
         <Login />
-      </div>
+      </div></div>
     </div>
   );
 };

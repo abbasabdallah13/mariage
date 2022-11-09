@@ -45,21 +45,25 @@ const DDay = () => {
     setInterval(updateCountdown, 1000);
   }, []);
 
+  // if hours or minutes or seconds are less than 10, we add a 0 before
+  const format = (item) => (item < 10 ? `0${item}` : item);
+  
+
   const { days, hours, minutes, seconds } = countdown; // we destructure the state
 
   return (
     <div className="dDayContainer">
       <div className="dDayContainer_Count">
-        <div className="dDayContainer_days">{days}</div>
+        <div className="dDayContainer_days"><span>{format(days)}</span></div>
       </div>
       <div className="dDayContainer_Count">
-        <div className="dDayContainer_hours">{hours}</div>
+        <div className="dDayContainer_hours"><span>{format(hours)}</span></div>
       </div>
       <div className="dDayContainer_Count">
-        <div className="dDayContainer_minutes">{minutes}</div>
+        <div className="dDayContainer_minutes"><span>{format(minutes)}</span></div>
       </div>
       <div className="dDayContainer_Count">
-        <div className="dDayContainer_seconds">{seconds}</div>
+        <div className="dDayContainer_seconds"><span>{format(seconds)}</span></div>
       </div>
     </div>
   );

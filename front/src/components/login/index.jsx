@@ -6,7 +6,7 @@ import { client } from '../../client';
 import "./index.scss";
 
 export default function Login() {
-  const [guests, setGuests] = useState(null);
+  const [guests, setGuests] = useState([]);
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
@@ -25,15 +25,18 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let guest = guests.find(
-      (guest) =>
-        guest.userName.current === userName &&
-        guest.password.current === password
-    );
-    console.log(guest);
-    guest ? navigate('/home') : alert('Wrong username or password');
+    let guest = guests.find(guest => (guest.userName !== null && guest.userName.current === userName) 
+    && (guest.password !== null && guest.password.current === password));
+    if (guest) {
+      localStorage.setItem('userName', guest.userName.current);
+      navigate('/home');
+    }
+    else {
+      alert('Wrong username or password');
+    }
   }
 
+console.log(guests);
   return (
     <>
       <Form onSubmit={handleSubmit} className='form'>
@@ -48,13 +51,14 @@ export default function Login() {
         </Form.Group>
         <Form.Group size='lg' controlId='password'>
           <Form.Control
+          className=''
             type='password'
             value={password}
             placeholder='Password'
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button block='true' size='lg' type='submit'>
+        <Button block='true' size='lg' type='submit' className='glow-on-hover'>
           Login
         </Button>
       </Form>

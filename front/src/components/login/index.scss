@@ -1,15 +1,91 @@
 .form {
-    display: flex;
-    flex-direction: column;
-    input {
-        padding: 10px;
-        margin: 10px;
-    }
-    button {
-        padding: 10px;
-        margin: 10px 30px;
-        border-radius: 10px;
-        border: 1px solid black;
-        background-color: white;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 35%;
+  align-items: center;
+  input {
+    width: 220px;
+    height: 50px;
+    margin: 2.5px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+    border-radius: 5px;
+  }
+}
+.glow-on-hover {
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #f28b96,
+    #fac2b0,
+    #f8aeb2,
+    #f9ae93,
+    #fdddb1,
+    #fae9a0,
+    #f78a93,
+    #f9aabe,
+    #fac2c7
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: white;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }

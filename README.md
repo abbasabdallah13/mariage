@@ -98,7 +98,8 @@ After the guest logged in he will be navigated to the main page ( Questions ).
 ## To Do
 
 - Need to organise the fetch in data.js
-- One error need fix in Logging page when the username does not exist
+- Need to find a way to hash the password 
+- Need to start the home page (can use random question i'll fix and translate later)
 
 ## In Progress
 - CSS for login page, need to improve
@@ -113,9 +114,11 @@ After the guest logged in he will be navigated to the main page ( Questions ).
 - Added password slug to the guests in the back auto generating. Added pictures for the login pages.
 - The Logging page is done for the fonctionality (1 error)
 - The DDAY is done
+- We cannot access home page from url if not logged in (security)
+- The error from login page when no user found is fixed
 
 ## what are you working on ? 
-Julien : standby EOD
+Julien : I'am going week end until sunday . Good luck.
 
 ## Design
 
