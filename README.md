@@ -118,6 +118,7 @@ Once the user logs in, they will be navigated to the main page containing Questi
 ## what are you working on ?
 
 Julien : I'am going week end until sunday . Good luck.
+Sunny : Login page css, Home page logic
 
 ## Design
 
