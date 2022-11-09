@@ -7,8 +7,8 @@ import './index.scss';
 
 const Login = () => {
   const [guests, setGuests] = useState([]);
-  const [userName, setUserName] = useState('');
-  const [password, setPassword] = useState('');
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   // to make sure the userName in local storage is empty
@@ -65,26 +65,26 @@ const Login = () => {
 
   return (
     <>
-      <Form onSubmit={handleSubmit} className='form'>
-        <Form.Group size='lg' controlId='userName'>
+      <Form onSubmit={handleSubmit} className="form">
+        <Form.Group size="lg" controlId="userName">
           <Form.Control
             autoFocus
-            type='text'
+            type="text"
             value={userName}
-            placeholder='Username'
+            placeholder="Username"
             onChange={(e) => setUserName(e.target.value)}
           />
         </Form.Group>
-        <Form.Group size='lg' controlId='password'>
+        <Form.Group size="lg" controlId="password">
           <Form.Control
             className=''
             type='password'
             value={password}
-            placeholder='Password'
+            placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button block='true' size='lg' type='submit' className='glow-on-hover'>
+        <Button block="true" size="lg" type="submit" className="glow-on-hover">
           Login
         </Button>
       </Form>
