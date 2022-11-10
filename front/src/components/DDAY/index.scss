@@ -3,6 +3,7 @@
   width: 100%;
   justify-content: center;
   margin-bottom: 20px;
+
   &_Count {
     margin: 5px;
     width: 50px;
@@ -10,33 +11,37 @@
   }
 
   &_days::after {
-    content: "J";
-    font-family: "Great Vibes", cursive;
+    content: 'J';
+    font-family: 'Great Vibes', cursive;
     @media screen and (min-width: 768px) {
-      content: "Jours";
+      content: 'Jours';
     }
   }
+
   &_hours::after {
-    content: "H";
-    font-family: "Great Vibes", cursive;
+    content: 'H';
+    font-family: 'Great Vibes', cursive;
     @media screen and (min-width: 768px) {
-      content: "Hours";
+      content: 'Hours';
     }
   }
+
   &_minutes::after {
-    content: "M";
-    font-family: "Great Vibes", cursive;
+    content: 'M';
+    font-family: 'Great Vibes', cursive;
     @media screen and (min-width: 768px) {
-      content: "Minutes";
+      content: 'Minutes';
     }
   }
+
   &_seconds::after {
-    content: "S";
-    font-family: "Great Vibes", cursive;
+    content: 'S';
+    font-family: 'Great Vibes', cursive;
     @media screen and (min-width: 768px) {
-      content: "Secondes";
+      content: 'Secondes';
     }
   }
+
   &_days,
   &_hours,
   &_minutes,

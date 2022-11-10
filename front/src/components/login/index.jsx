@@ -1,15 +1,20 @@
-import React, { useState, useEffect } from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import { useNavigate } from "react-router-dom";
-import { client } from "../../client";
-import "./index.scss";
+import React, { useState, useEffect } from 'react';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
+import { client } from '../../client';
+import './index.scss';
 
-export default function Login() {
+const Login = () => {
   const [guests, setGuests] = useState([]);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  // to make sure the userName in local storage is empty
+  // when you are in login page
+  localStorage.clear();
+  console.log('i am userName : ', localStorage.getItem('userName'));
 
   useEffect(() => {
     client
@@ -33,28 +38,31 @@ export default function Login() {
   function handleSubmit(event) {
     event.preventDefault();
     let guest = guests.find(
-      (guest) =>
-        guest.userName !== null &&
-        guest.userName.current === userName &&
-        guest.password !== null &&
-        guest.password.current === password
+      (g) =>
+        g.userName !== null &&
+        g.userName.current === userName &&
+        g.password !== null &&
+        g.password.current === password
     );
+
     if (guest) {
       // if guest login properly then we store his information in local storage
-      localStorage.setItem("userName", guest.userName.current);
-      localStorage.setItem("firstName", guest.firstName);
-      localStorage.setItem("childrens", guest.childrens);
-      localStorage.setItem("partner", guest.partner);
-      localStorage.setItem("reception", guest.reception);
-      localStorage.setItem("wineReception", guest.wineReception);
+      localStorage.setItem('userName', guest.userName.current);
+      localStorage.setItem('firstName', guest.firstName);
+      localStorage.setItem('childrens', guest.childrens);
+      localStorage.setItem('partner', guest.partner);
+      localStorage.setItem('reception', guest.reception);
+      localStorage.setItem('wineReception', guest.wineReception);
 
-      navigate("/home");
+      navigate('/home');
     } else {
-      alert("Wrong username or password");
+      alert('Wrong username or password');
     }
   }
 
-  console.log(guests);
+  console.log('i am guests list : ', guests);
+  console.log('i am the guest : ', localStorage.getItem('userName'));
+
   return (
     <>
       <Form onSubmit={handleSubmit} className="form">
@@ -69,8 +77,8 @@ export default function Login() {
         </Form.Group>
         <Form.Group size="lg" controlId="password">
           <Form.Control
-            className=""
-            type="password"
+            className=''
+            type='password'
             value={password}
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
@@ -82,4 +90,6 @@ export default function Login() {
       </Form>
     </>
   );
-}
+};
+
+export default Login;
