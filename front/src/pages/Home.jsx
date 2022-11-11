@@ -79,7 +79,7 @@ const Home = () => {
       <h1>Bonjour {firstName}</h1>
       <div className="questions">
         {/* i can tell if the user is invited to the reception or not */}
-        {{reception} === "true" ? (
+        {reception === "true" ? (
           <div className="question">
             {/* if he is i show him the proper question */}
             <h2>{questions[0].question}</h2>
