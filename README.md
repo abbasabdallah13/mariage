@@ -95,6 +95,8 @@ Once the user logs in, they will be navigated to the main page containing Questi
 ## To Do
 
 - Need to find a way to hash the password
+- Clean up the dependencies (i.e. tailwind, postcss etc.)
+- Sort out convention
 
 ## In Progress
 
