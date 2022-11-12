@@ -1,39 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
-import { client } from '../../client';
+import Guests from '../../utils/Guests';
 import './index.scss';
 
 const Login = () => {
-  const [guests, setGuests] = useState([]);
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const guests = Guests();
 
   // to make sure the userName in local storage is empty
   // when you are in login page
   localStorage.clear();
-  console.log('i am userName : ', localStorage.getItem('userName'));
 
-  useEffect(() => {
-    client
-      .fetch(
-        `*[_type == "guests"] {
-        userName,
-        password,
-        firstName,
-        childrens,
-        partner,
-        reception,
-        wineReception,
-        accommodation1night,
-        accommodation2night,
-      }`
-      )
-      .then((guests) => setGuests(guests))
-      .catch(console.error);
-  }, []);
+  console.log('i am guests list : ', guests);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -45,14 +27,29 @@ const Login = () => {
         g.password.current === password
     );
 
+    console.log('i am the guest : ', guest);
+
     if (guest) {
-      // if guest login properly then we store his information in local storage
-      localStorage.setItem('userName', guest.userName.current);
-      localStorage.setItem('firstName', guest.firstName);
-      localStorage.setItem('childrens', guest.childrens);
-      localStorage.setItem('partner', guest.partner);
-      localStorage.setItem('reception', guest.reception);
-      localStorage.setItem('wineReception', guest.wineReception);
+      Object.keys(guest).map((info) => {
+        switch (info) {
+          case 'password':
+            localStorage.setItem(info, true);
+            break;
+          case 'userName':
+            localStorage.setItem(info, guest[info].current);
+            break;
+          default:
+            localStorage.setItem(info, guest[info]);
+        }
+        // if this has better readability than above block, swap it!
+        // info === 'password'
+        //   ? storage('set', info, true)
+        //   : info === 'userName'
+        //   ? storage('set', info, guest[info].current)
+        //   : storage('set', info, guest[info]);
+
+        return console.log(info, 'is set in the local storage');
+      });
 
       navigate('/home');
     } else {
@@ -60,31 +57,28 @@ const Login = () => {
     }
   }
 
-  console.log('i am guests list : ', guests);
-  console.log('i am the guest : ', localStorage.getItem('userName'));
-
   return (
     <>
-      <Form onSubmit={handleSubmit} className="form">
-        <Form.Group size="lg" controlId="userName">
+      <Form onSubmit={handleSubmit} className='form'>
+        <Form.Group size='lg' controlId='userName'>
           <Form.Control
             autoFocus
-            type="text"
+            type='text'
             value={userName}
-            placeholder="Username"
+            placeholder='Username'
             onChange={(e) => setUserName(e.target.value)}
           />
         </Form.Group>
-        <Form.Group size="lg" controlId="password">
+        <Form.Group size='lg' controlId='password'>
           <Form.Control
             className=''
             type='password'
             value={password}
-            placeholder="Password"
+            placeholder='Password'
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button block="true" size="lg" type="submit" className="glow-on-hover">
+        <Button block='true' size='lg' type='submit' className='glow-on-hover'>
           Login
         </Button>
       </Form>

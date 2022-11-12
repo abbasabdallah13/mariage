@@ -94,12 +94,11 @@ Once the user logs in, they will be navigated to the main page containing Questi
 
 ## To Do
 
-- Need to organise the fetch in data.js
 - Need to find a way to hash the password
-- Need to start the home page (can use random question i'll fix and translate later)
 
 ## In Progress
 
+- Need to start the home page (can use random question i'll fix and translate later)
 - CSS for login page, need to improve
 
 ## Done
@@ -114,11 +113,12 @@ Once the user logs in, they will be navigated to the main page containing Questi
 - The DDAY is done
 - We cannot access home page from url if not logged in (security)
 - The error from login page when no user found is fixed
+- Need to organise the fetch in data.js
 
 ## what are you working on ?
 
 Julien : I'am going week end until sunday . Good luck.
-Sunny : Login page css, Home page logic
+Sunny : Generating questions
 
 ## Design
 
