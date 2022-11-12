@@ -1,23 +1,27 @@
-import React from 'react';
-import Login from '../../components/login';
-import DDay from '../../components/DDAY/index';
-import './index.scss';
+import React from "react";
+import Login from "../../components/login";
+import DDay from "../../components/DDAY/index";
+import "./index.scss";
 
 const LoginPage = () => {
   return (
-    <div className='loginPage'>
-      <div className='loginPage_Form'>
-        <h1>Maëva & Julien</h1>
-        <div className='loginPage_Content'>
-          <p>
-            Nous sommes impatients de célébrer notres mariage à vos côtés le
-            samedi 20 mai 2023. En attendant de pouvoir communiquer tous les
-            détails, nous vous invitons à répondre au préalable à quelques
-            questions.
-          </p>
-          <DDay />
-          <Login />
-        </div>
+    <div className="loginPage">
+      <div className="loginPage_Description">
+        <h1>Save the date</h1>
+        <p>
+          Maëva & Julien sont impatients de célébrer leurs mariage à vos côtés
+          le samedi 20 mai 2023. En attendant de pouvoir communiquer tous les
+          détails, nous vous invitons à répondre au préalable à quelques
+          questions.
+        </p>
+      </div>
+      <div className="loginPage_DDay">
+        <h2>Maëva & Julien</h2>
+        <DDay />
+        <h3>Le samedi 20 mai 2023</h3>
+      </div>
+      <div className="loginPage_Login">
+        <Login />
       </div>
     </div>
   );
