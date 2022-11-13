@@ -3,6 +3,7 @@
 Development of a GuestsList organizer.  
 Guests will receive the link for the web app with a Username and Password.  
 The link will take the user to the login page.
+After they log in they will have few questions , the anwsers will be stocked and sent to the customers.
 
 <br>
 
@@ -52,7 +53,7 @@ Once the user logs in, they will be navigated to the main page containing Questi
 
   --- if the answer is no ---
 
-  display ENDING MESSAGE
+  Go to next question
   ```
 
 - Question 3 : Room
@@ -60,11 +61,24 @@ Once the user logs in, they will be navigated to the main page containing Questi
   ```
   --- How many night they need room for ---
 
-  Q. Do you need a room for 1 night or for 2 night? (The price is 70E per pers)
-  A. 1 night / 2 nights
+There is 2 type of guest : 
+- Guest 1 : will have choice between 1 or 2 night(friday and saturday )
+- Guest 2 : will have only saturday night 
 
-  if they take this option, send the hotel info
+- Guest 1 : 
+  Q. You can choose to stay over friday and saturday night (76e per pers)
+  A. YES/NO 
+  - If yes : 
+  Q.Friday / Saturday / Both 
+  A. Need to select one answer 
+
+  if they take this option, Message : We will come back to you for more informations
   ```
+- Guest 2 : 
+Q. You can stay over on saturday night (76e per pers)
+A. YES/NO
+  - If yes : Message : We will come back to you for more informations 
+  
 
 - `Questions are depending on the Guests.`
 
@@ -122,16 +136,22 @@ Once the user logs in, they will be navigated to the main page containing Questi
 
 ## what are you working on ?
 
-Julien : I'am going week end until sunday . Good luck.
+Julien : css login page responsive
 Sunny : Generating questions
 
 ## Design
 
 - Web - Login page
 
-  <img height="500" alt="Capture d’écran 2022-11-06 à 21 53 39" src="https://user-images.githubusercontent.com/104718280/200194975-902b15eb-0d95-4b84-9363-e397f57ab52d.png">
+![웹 웨딩](https://user-images.githubusercontent.com/104718280/201543537-663d94ec-d99f-415a-9599-8fb86625f213.png)
 
-- Mobile - Login page
+
+- Mobile/tablet - Login page
+![웨딩1](https://user-images.githubusercontent.com/104718280/201543569-578cead5-0d0c-4e0d-9786-9fea41c5f8e6.png)
+
+- Assets
+![배경-완성](https://user-images.githubusercontent.com/104718280/201543594-0db8a7a0-0e8f-42f6-8cc4-e34760e0bd0a.png)
+
 
 ## Useful info - git commands
 
