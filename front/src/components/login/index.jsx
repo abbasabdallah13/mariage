@@ -11,8 +11,6 @@ const Login = () => {
   const navigate = useNavigate();
   const guests = Guests();
 
-  // to make sure the userName in local storage is empty
-  // when you are in login page
   localStorage.clear();
 
   console.log('i am guests list : ', guests);
@@ -27,8 +25,6 @@ const Login = () => {
         g.password.current === password
     );
 
-    console.log('i am the guest : ', guest);
-
     if (guest) {
       Object.keys(guest).map((info) => {
         switch (info) {
@@ -41,14 +37,8 @@ const Login = () => {
           default:
             localStorage.setItem(info, guest[info]);
         }
-        // if this has better readability than above block, swap it!
-        // info === 'password'
-        //   ? storage('set', info, true)
-        //   : info === 'userName'
-        //   ? storage('set', info, guest[info].current)
-        //   : storage('set', info, guest[info]);
 
-        return console.log(info, 'is set in the local storage');
+        return console.log(' i am guest from login/index.js : ', guest);
       });
 
       navigate('/home');

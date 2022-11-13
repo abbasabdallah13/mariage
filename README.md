@@ -100,22 +100,25 @@ Once the user logs in, they will be navigated to the main page containing Questi
 
 ## In Progress
 
-- Need to start the home page (can use random question i'll fix and translate later)
+- Handle the answers (maybe `accommodation1Night` and `accommodation2Night` should be in one question?)
+- Fetch request with updated user answer (will use `infoList` state)
 - CSS for login page, need to improve
 
 ## Done
 
-- Back end set with Sanity. will be improve as we move.
-- Front connected to sanity , getting the Guest from the DB.
-- Login page created.
-- DB content Name changed to guests instead of guest.
-- Created all the guests info in db.
-- Added password slug to the guests in the back auto generating. Added pictures for the login pages.
-- The Logging page is done for the fonctionality (1 error)
-- The DDAY is done
-- We cannot access home page from url if not logged in (security)
-- The error from login page when no user found is fixed
-- Need to organise the fetch in data.js
+- Set Backend with Sanity
+- Connect Frontend to sanity (getting the Guest from the DB)
+- Create Login page
+- Change DB name to `guests` from `guest`
+- Create guests info in DB.
+- Add auto generating password slug to the guests in DB
+- Add pictures for the login pages
+- Create login feature
+- Create DDAY feature
+- Set security feature (user cannot access home page from url if not logged in)
+- Fix login page error (no reaction when no user found)
+- Organise fetch for guests in utils/Guests.js
+- Add question feature depending on guest type(reception/wine)
 
 ## what are you working on ?
 
