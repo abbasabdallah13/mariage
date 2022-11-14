@@ -1,12 +1,7 @@
 .form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 35%;
-  align-items: center;
-
+  text-align: center;
   input {
-    width: 220px;
+    width: 150px;
     height: 50px;
     margin: 2.5px;
     padding: 10px;
@@ -18,8 +13,8 @@
 
 .glow-on-hover {
   margin-top: 20px;
-  width: 200px;
-  height: 50px;
+  width: 100px;
+  height: 25px;
   border: none;
   cursor: pointer;
   position: relative;
