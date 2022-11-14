@@ -116,7 +116,8 @@ A. YES/NO
 
 - Handle the answers (maybe `accommodation1Night` and `accommodation2Night` should be in one question?)
 - Fetch request with updated user answer (will use `infoList` state)
-- CSS for login page, need to improve
+- CSS for login page, done for all size. Need to work on font (size and familly)
+  we have a scroll using the toggle device toolbar but not when using normal broswer sizing. Will it be an issue ? or just dev tools bug .(using overflow hidden)
 
 ## Done
 
