@@ -2,6 +2,7 @@ import React from "react";
 import Login from "../../components/login";
 import DDay from "../../components/DDAY/index";
 import "./index.scss";
+import flowers from "../../assets/flowers.png";
 
 const LoginPage = () => {
   return (
@@ -15,11 +16,18 @@ const LoginPage = () => {
           questions.
         </p>
       </div>
+
       <div className="loginPage_DDay">
-        <h2>Maëva & Julien</h2>
-        <DDay />
-        <h3>Le samedi 20 mai 2023</h3>
+        <div className="loginPage_DDay_content">
+          <h2>Maëva & Julien</h2>
+          <DDay />
+          <h3>Le samedi 20 mai 2023</h3>
+        </div>
+        <div className="loginPage_img">
+          <img src={flowers} alt="image of a flower" />
+        </div>
       </div>
+
       <div className="loginPage_Login">
         <Login />
       </div>
