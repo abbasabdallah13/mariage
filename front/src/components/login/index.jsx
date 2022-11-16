@@ -50,24 +50,26 @@ const Login = () => {
   return (
     <>
       <Form onSubmit={handleSubmit} className='form'>
-        <Form.Group size='lg' controlId='userName'>
-          <Form.Control
-            autoFocus
-            type='text'
-            value={userName}
-            placeholder='Username'
-            onChange={(e) => setUserName(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group size='lg' controlId='password'>
-          <Form.Control
-            className=''
-            type='password'
-            value={password}
-            placeholder='Password'
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </Form.Group>
+        <div className='form_inputs'>
+          <Form.Group size='lg' controlId='userName'>
+            <Form.Control
+              // autoFocus
+              type='text'
+              value={userName}
+              placeholder='Username'
+              onChange={(e) => setUserName(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group size='lg' controlId='password'>
+            <Form.Control
+              className=''
+              type='password'
+              value={password}
+              placeholder='Password'
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Form.Group>
+        </div>
         <Button block='true' size='lg' type='submit' className='glow-on-hover'>
           Login
         </Button>

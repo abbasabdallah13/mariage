@@ -1,74 +1,150 @@
 .loginPage {
   height: 100vh;
+  width: 100vw;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #fdfef7;
+
   @media screen and (min-width: 1024px) {
-    display: flex;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: space-between;
   }
-  &_DDay {
-    justify-content: center;
-    height: 50%;
+
+  &_Description {
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+    height: 30%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+
+    h1 {
+      margin: 0.5rem 0;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 0.5rem 7rem;
+
+      h1 {
+        margin: 1rem 0;
+        font-size: 2.5rem;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 50%;
+      height: 30vh;
+      margin: -60vh 0 0;
+      padding: 15rem 7rem 0 2rem;
+
+      h1 {
+        margin: 1rem 0;
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &_DDay {
+    height: 40%;
+    margin: 1rem 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loginPage_img {
+      // height is showing flower.
+      // maybe consider smaller countdown box
+      // so that flower can show a bit more.
+      // need to make more space inside not outside
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+    }
+
+    @media screen and (min-width: 768px) {
+      // .loginPage_img {
+      //   // height is showing flower.
+      //   // maybe consider smaller countdown box
+      //   // so that flower can show a bit more.
+      //   // need to make more space inside not outside
+      //   height: 100vh;
+      //   display: flex;
+      //   justify-content: center;
+      //   position: absolute;
+      // }
+      img {
+        width: 32rem;
+        object-fit: cover;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 50%;
+
+      img {
+        width: 600px;
+      }
+    }
+
     &_content {
-      border-radius: 51%;
-      background-color: white;
-      width: 270px;
-      height: 270px;
+      height: 260px;
+      width: 260px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       z-index: 3;
+      border-radius: 50%;
+      background-color: white;
+
       @media screen and (min-width: 768px) {
-        width: 350px;
-        height: 350px;
+        width: 320px;
+        height: 320px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 380px;
+        height: 380px;
       }
     }
 
     h2 {
-      font-family: "Great Vibes", cursive;
+      font-family: 'Great Vibes', cursive;
     }
+
     h3 {
-      font-family: "Great Vibes", cursive;
+      font-family: 'Great Vibes', cursive;
     }
   }
+
   &_Login {
-    height: 25%;
+    margin: 1rem 0;
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  &_Description {
-    height: 25%;
-    padding: 5%;
+
     @media screen and (min-width: 1024px) {
       width: 50%;
-      height: 60%;
-      padding: 0;
-    }
-    h1 {
-      margin: 15px;
-      @media screen and (min-width: 1024px) {
-        font-size: 3rem;
-      }
-    }
-  }
-  &_img {
-    height: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    @media screen and (min-width: 768px) {
-      width: 100%;
-    }
-    img {
-      @media screen and (min-width: 768px) {
-        width: 500px;
-        object-fit: cover;
-      }
+      margin: 0 -45vw -35vh 0;
+      height: 30vh;
+      display: block;
+      position: absolute;
     }
   }
 }
