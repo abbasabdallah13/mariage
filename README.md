@@ -126,6 +126,9 @@ There is 2 type of guest :
 - Fetch request with updated user answer (will use `infoList` state)
 - work on css for questions page
 - Can we add a transition between change of pages (after login)
+- Set children to false or true in db and ask directly names in question and age 
+- End of question make a box for comments ( anything could be a nice message or more details not asked in the questions )
+- See if we could make a dashboard for customers to access all the informations
 
 ## Done
 
