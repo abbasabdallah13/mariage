@@ -211,7 +211,12 @@ const Home = () => {
                 <div key={index}>
                   <p>
                     <span>{eachInfo.name}</span> :{" "}
-                    <span>{eachInfo.answer}</span>
+                    {/* each info answer shoud look like this : if true "yes" if false "no" */}
+                    {eachInfo.answerType === "boolean"
+                      ? eachInfo.answer === "true"
+                        ? "yes"
+                        : "no"
+                      : eachInfo.answer}
                   </p>
                 </div>
               );
