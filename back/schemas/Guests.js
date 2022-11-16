@@ -35,8 +35,7 @@ export default {
     {
       name: 'childrens',
       title: 'Childrens',
-      type: 'array',
-      of: [{ type: 'string' }],
+      type: 'boolean',
     },
     {
       name: 'partner',
