@@ -125,6 +125,7 @@ There is 2 type of guest :
 - Handle the answers (maybe `accommodation1Night` and `accommodation2Night` should be in one question?)
 - Fetch request with updated user answer (will use `infoList` state)
 - work on css for questions page
+- Can we add a transition between change of pages (after login)
 
 ## Done
 

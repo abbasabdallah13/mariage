@@ -204,7 +204,8 @@ const Home = () => {
           <div className="answer-section">
             <div>{answerOptions}</div>
           </div>
-          <div>
+          {/* remove style to see the list ( not sure we have to show it ) */}
+          <div style={{display: "none"}}> 
             <h2>Info List</h2>
             {infoList.map((eachInfo, index) => {
               return (
