@@ -20,9 +20,8 @@ const questionGenerator = (reception, partner, children) => {
     {
       name: 'partner',
       section: 'partnerQuestion',
-      question:
-        'Is your partner attending as well? If so, add their name. If not, leave it as an empty space',
-      answerType: 'string',
+      question: `Is your ${partner} attending`,
+      answerType: 'boolean',
     },
   ];
 
@@ -30,8 +29,7 @@ const questionGenerator = (reception, partner, children) => {
     {
       name: 'childrens',
       section: 'childrensQuestion',
-      question:
-        'are you coming with your kids? If so, add their age with number',
+      question: 'How old are your children?',
       answerType: 'array',
     },
   ];

@@ -1,0 +1,76 @@
+.exitPage {
+  height: 100vh;
+  background-color: #fdfef7;
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_DDay {
+    justify-content: center;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    &_content {
+      border-radius: 51%;
+      background-color: white;
+      width: 270px;
+      height: 270px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 3;
+      @media screen and (min-width: 768px) {
+        width: 350px;
+        height: 350px;
+      }
+    }
+
+    h2 {
+      font-family: 'Great Vibes', cursive;
+    }
+    h3 {
+      font-family: 'Great Vibes', cursive;
+    }
+  }
+  &_Message {
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_Description {
+    height: 25%;
+    padding: 5%;
+    @media screen and (min-width: 1024px) {
+      width: 50%;
+      height: 60%;
+      padding: 0;
+    }
+    h1 {
+      margin: 15px;
+      @media screen and (min-width: 1024px) {
+        font-size: 3rem;
+      }
+    }
+  }
+  &_img {
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width: 768px) {
+      width: 100%;
+    }
+    img {
+      @media screen and (min-width: 768px) {
+        width: 500px;
+        object-fit: cover;
+      }
+    }
+  }
+}

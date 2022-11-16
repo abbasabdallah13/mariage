@@ -54,7 +54,7 @@ const Home = () => {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
         setInfoList(updateInfoList);
       } else {
-        alert('done');
+        navigate('/exit');
       }
     },
     [
@@ -66,6 +66,7 @@ const Home = () => {
       localChildrens,
       localPartner,
       localReception,
+      navigate,
     ]
   );
 

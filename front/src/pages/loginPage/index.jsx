@@ -1,13 +1,13 @@
-import React from "react";
-import Login from "../../components/login";
-import DDay from "../../components/DDAY/index";
-import "./index.scss";
-import flowers from "../../assets/flowers.png";
+import React from 'react';
+import Login from '../../components/login';
+import DDay from '../../components/DDAY/index';
+import './index.scss';
+import flowers from '../../assets/flowers.png';
 
 const LoginPage = () => {
   return (
-    <div className="loginPage">
-      <div className="loginPage_Description">
+    <div className='loginPage'>
+      <div className='loginPage_Description'>
         <h1>Save the date</h1>
         <p>
           Maëva & Julien sont impatients de célébrer leurs mariage à vos côtés
@@ -17,18 +17,18 @@ const LoginPage = () => {
         </p>
       </div>
 
-      <div className="loginPage_DDay">
-        <div className="loginPage_DDay_content">
+      <div className='loginPage_DDay'>
+        <div className='loginPage_img'>
+          <img src={flowers} alt='flower' />
+        </div>
+        <div className='loginPage_DDay_content'>
           <h2>Maëva & Julien</h2>
           <DDay />
           <h3>Le samedi 20 mai 2023</h3>
         </div>
-        <div className="loginPage_img">
-          <img src={flowers} alt="image of a flower" />
-        </div>
       </div>
 
-      <div className="loginPage_Login">
+      <div className='loginPage_Login'>
         <Login />
       </div>
     </div>

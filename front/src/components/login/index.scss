@@ -1,44 +1,58 @@
 .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   position: absolute;
-  width: 100%;
-  @media screen and (min-width: 1024px) {
-    width: 50%;
-    left: 50%;
+
+  &_inputs {
+    width: 100%;
+    margin: 0.2rem 0;
+    display: flex;
+    justify-content: center;
   }
+
   input {
-    width: 150px;
-    height: 50px;
-    margin: 2.5px;
+    width: 9rem;
+    height: 2.8rem;
+    margin: 0.4rem;
     padding: 10px;
     border: none;
-    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
     border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+
     @media screen and (min-width: 768px) {
-      width: 200px;
-      height: 60px;
+      width: 15rem;
     }
   }
 }
 
 .glow-on-hover {
-  margin-top: 20px;
-  width: 100px;
-  height: 25px;
-  border: none;
-  cursor: pointer;
+  width: 18.8rem;
+  padding: 0.8rem 2rem;
   position: relative;
   z-index: 0;
-  border-radius: 10px;
+  border: none;
+  border-radius: 5px;
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+  cursor: pointer;
+
   @media screen and (min-width: 768px) {
-    width: 150px;
+    width: 30.9rem;
     height: 40px;
   }
 }
 
 .glow-on-hover:before {
-  content: '';
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  position: absolute;
+  z-index: -1;
+  border-radius: 5px;
   background: linear-gradient(
     45deg,
     #f28b96,
@@ -51,18 +65,12 @@
     #f9aabe,
     #fac2c7
   );
-  position: absolute;
-  top: -2px;
-  left: -2px;
   background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
   animation: glowing 20s linear infinite;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
+  content: '';
+  filter: blur(5px);
 }
 
 .glow-on-hover:active {
@@ -78,15 +86,15 @@
 }
 
 .glow-on-hover:after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgb(255, 255, 255);
   left: 0;
   top: 0;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  content: '';
 }
 
 @keyframes glowing {
