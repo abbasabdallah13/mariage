@@ -115,7 +115,7 @@ There is 2 type of guest :
 
 ## To Do
 
-- On mobile, when you click the input, the screen goes up and ruin the design. Need to figure out what to do for it.
+- On mobile, when you click the input, the screen goes up and ruin the design. Need to figure out what to do for it.(couldnt see it)
 - Need to find a way to hash the password
 - Clean up the dependencies (i.e. tailwind, postcss etc.)
 - Sort out convention
@@ -124,8 +124,7 @@ There is 2 type of guest :
 
 - Handle the answers (maybe `accommodation1Night` and `accommodation2Night` should be in one question?)
 - Fetch request with updated user answer (will use `infoList` state)
-- CSS for login page, done for all size. Need to work on font (size and familly)
-  we have a scroll using the toggle device toolbar but not when using normal broswer sizing. Will it be an issue ? or just dev tools bug .(using overflow hidden)
+- work on css for questions page
 
 ## Done
 
@@ -142,10 +141,12 @@ There is 2 type of guest :
 - Fix login page error (no reaction when no user found)
 - Organise fetch for guests in utils/Guests.js
 - Add question feature depending on guest type(reception/wine)
+- Css login page
+- Carousel for questions page
 
 ## what are you working on ?
 
-Julien : css login page responsive
+Julien : css for questions page (waiting on final design) and trying to improve and fix a bit of everything.
 Sunny : question edit, styling login page / exit page - responsive
 
 ## Design
