@@ -60,25 +60,32 @@ Once the user logs in, they will be navigated to the main page containing Questi
 
   ```
   --- How many night they need room for ---
+  ```
 
-There is 2 type of guest : 
+There is 2 type of guest :
+
 - Guest 1 : will have choice between 1 or 2 night(friday and saturday )
-- Guest 2 : will have only saturday night 
+- Guest 2 : will have only saturday night
 
-- Guest 1 : 
+- Guest 1 :
   Q. You can choose to stay over friday and saturday night (76e per pers)
-  A. YES/NO 
-  - If yes : 
-  Q.Friday / Saturday / Both 
-  A. Need to select one answer 
+  A. YES/NO
+
+  - If yes :
+    Q.Friday / Saturday / Both
+    A. Need to select one answer
 
   if they take this option, Message : We will come back to you for more informations
+
   ```
-- Guest 2 : 
-Q. You can stay over on saturday night (76e per pers)
-A. YES/NO
-  - If yes : Message : We will come back to you for more informations 
-  
+
+  ```
+
+- Guest 2 :
+  Q. You can stay over on saturday night (76e per pers)
+  A. YES/NO
+
+  - If yes : Message : We will come back to you for more informations
 
 - `Questions are depending on the Guests.`
 
@@ -108,6 +115,7 @@ A. YES/NO
 
 ## To Do
 
+- On mobile, when you click the input, the screen goes up and ruin the design. Need to figure out what to do for it.
 - Need to find a way to hash the password
 - Clean up the dependencies (i.e. tailwind, postcss etc.)
 - Sort out convention
@@ -138,7 +146,7 @@ A. YES/NO
 ## what are you working on ?
 
 Julien : css login page responsive
-Sunny : Generating questions
+Sunny : question edit, styling login page / exit page - responsive
 
 ## Design
 
@@ -146,13 +154,11 @@ Sunny : Generating questions
 
 ![웹 웨딩](https://user-images.githubusercontent.com/104718280/201543537-663d94ec-d99f-415a-9599-8fb86625f213.png)
 
-
 - Mobile/tablet - Login page
-![웨딩1](https://user-images.githubusercontent.com/104718280/201543569-578cead5-0d0c-4e0d-9786-9fea41c5f8e6.png)
+  ![웨딩1](https://user-images.githubusercontent.com/104718280/201543569-578cead5-0d0c-4e0d-9786-9fea41c5f8e6.png)
 
 - Assets
-![배경-완성](https://user-images.githubusercontent.com/104718280/201543594-0db8a7a0-0e8f-42f6-8cc4-e34760e0bd0a.png)
-
+  ![배경-완성](https://user-images.githubusercontent.com/104718280/201543594-0db8a7a0-0e8f-42f6-8cc4-e34760e0bd0a.png)
 
 ## Useful info - git commands
 
