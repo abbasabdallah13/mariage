@@ -190,50 +190,31 @@ const Home = () => {
   console.log("updated list : ", infoList);
 
   return (
-    <div className="home">
-      <div className="home_container">
+    <div className='home'>
+      <div className='home_carousel'>
         <Carousel>
-          <img src={mariage1} alt="placeholder" />
-          <img src={mariage2} alt="placeholder" />
-          <img src={mariage3} alt="placeholder" />
-          <img src={mariage4} alt="placeholder" />
-          <img src={mariage5} alt="placeholder" />
-          <img src={mariage6} alt="placeholder" />
-          <img src={mariage7} alt="placeholder" />
-          <img src={mariage8} alt="placeholder" />
-          <img src={mariage9} alt="placeholder" />
+          <img src={mariage1} alt='placeholder' />
+          <img src={mariage2} alt='placeholder' />
+          <img src={mariage3} alt='placeholder' />
+          <img src={mariage4} alt='placeholder' />
+          <img src={mariage5} alt='placeholder' />
+          <img src={mariage6} alt='placeholder' />
+          <img src={mariage7} alt='placeholder' />
+          <img src={mariage8} alt='placeholder' />
+          <img src={mariage9} alt='placeholder' />
         </Carousel>
-        <div className="home_content">
+        <div className='home_contents'>
           <h1>Bonjour {localFirstName}</h1>
-          <div className="question-section">
-            <div className="question-count">
+          <div className='home_contents_questions'>
+            <div className='question-count'>
               Question {currentQuestionIndex + 1} / {infoList.length}
             </div>
-            <div className="question">
+            <div className='question'>
               {infoList[currentQuestionIndex].question}
             </div>
           </div>
-          <div className="answer-section">
+          <div className='home_contents_answers'>
             <div>{answerOptions}</div>
-          </div>
-          {/* remove style to see the list ( not sure we have to show it ) */}
-          <div style={{display: "none"}}> 
-            <h2>Info List</h2>
-            {infoList.map((eachInfo, index) => {
-              return (
-                <div key={index}>
-                  <p>
-                    <span>{eachInfo.name}</span> :{" "}
-                    {/* each info answer shoud look like this : if true "yes" if false "no" */}
-                    {eachInfo.answerType === "boolean"
-                      ? eachInfo.answer === "true"
-                        ? "yes"
-                        : "no"
-                      : eachInfo.answer}
-                  </p>
-                </div>
-              );
-            })}
           </div>
         </div>
       </div>
