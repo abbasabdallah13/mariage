@@ -119,6 +119,7 @@ There is 2 type of guest :
 - Need to find a way to hash the password
 - Clean up the dependencies (i.e. tailwind, postcss etc.)
 - Sort out convention
+- we have an issue with the questions , if answer is no it should not bring to next question
 
 ## In Progress
 
