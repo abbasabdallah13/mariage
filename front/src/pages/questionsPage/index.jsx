@@ -98,6 +98,41 @@ const Home = () => {
     [questionQuestion.answerType, answerForArray]
   );
 
+  const inputArr = [
+    {
+      type: "text",
+      id: 1,
+      value: ""
+    }
+  ];
+
+  const [arr, setArr] = useState(inputArr);
+
+  const addInput = () => {
+    setArr(s => {
+      const lastId = s[s.length - 1].id;
+      return [
+        ...s,
+        {
+          type: "text",
+          value: ""
+        }
+      ];
+    });
+  };
+
+  const handleChange = e => {
+    e.preventDefault();
+
+    const index = e.target.id;
+    setArr(s => {
+      const newArr = s.slice();
+      newArr[index].value = e.target.value;
+
+      return newArr;
+    });
+  };
+
   useEffect(() => {
     !localUserName && navigate("/");
 
@@ -117,30 +152,17 @@ const Home = () => {
       case "array":
         setAnswerOptions(
           <form onSubmit={handleSubmit}>
-            <input
-              placeholder="type here"
-              name="kid1"
-              value={answerForArray.kid1}
-              onChange={handleOptionChange}
-            ></input>
-            <input
-              placeholder="type here"
-              name="kid2"
-              value={answerForArray.kid2}
-              onChange={handleOptionChange}
-            ></input>
-            <input
-              placeholder="type here"
-              name="kid3"
-              value={answerForArray.kid3}
-              onChange={handleOptionChange}
-            ></input>
-            <input
-              placeholder="type here"
-              name="kid4"
-              value={answerForArray.kid4}
-              onChange={handleOptionChange}
-            ></input>
+            {arr.map((item, index) => (
+              <input
+                key={index}
+                id={index}
+                value={item.value}
+                onChange={handleChange}
+              />
+            ))}
+            <button type="button" onClick={addInput}>
+              Add
+            </button>
             <button type="submit">Save</button>
           </form>
         );
