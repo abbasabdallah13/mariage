@@ -5,7 +5,7 @@ const questionGenerator = (reception, partner, children) => {
     {
       name: 'reception',
       section: 'attendingQuestion',
-      question: 'Are you coming to the ceremony? (Wine reception included)',
+      question: 'Will you be attending the wedding?',
       answerType: 'boolean',
     },
     {
@@ -30,6 +30,12 @@ const questionGenerator = (reception, partner, children) => {
       name: 'childrens',
       section: 'childrensQuestion',
       question: 'How old are your children?',
+      answerType: 'boolean',
+    },
+    {
+      name: 'childrens',
+      section: 'childrensQuestionDetails',
+      question: 'age and name',
       answerType: 'array',
     },
   ];
