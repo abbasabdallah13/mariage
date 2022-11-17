@@ -7,6 +7,12 @@ import Carousel from "../components/Carousel/index";
 import mariage1 from "../assets/mariage1.jpeg";
 import mariage2 from "../assets/mariage2.jpeg";
 import mariage3 from "../assets/mariage3.jpeg";
+import mariage4 from "../assets/mariage4.jpeg";
+import mariage5 from "../assets/mariage5.jpeg";
+import mariage6 from "../assets/mariage6.jpeg";
+import mariage7 from "../assets/mariage7.jpeg";
+import mariage8 from "../assets/mariage8.jpeg";
+import mariage9 from "../assets/mariage9.jpeg";
 
 import "./Home.scss";
 
@@ -190,6 +196,12 @@ const Home = () => {
           <img src={mariage1} alt="placeholder" />
           <img src={mariage2} alt="placeholder" />
           <img src={mariage3} alt="placeholder" />
+          <img src={mariage4} alt="placeholder" />
+          <img src={mariage5} alt="placeholder" />
+          <img src={mariage6} alt="placeholder" />
+          <img src={mariage7} alt="placeholder" />
+          <img src={mariage8} alt="placeholder" />
+          <img src={mariage9} alt="placeholder" />
         </Carousel>
         <div className="home_content">
           <h1>Bonjour {localFirstName}</h1>
