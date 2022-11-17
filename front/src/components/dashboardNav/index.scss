@@ -1,0 +1,11 @@
+.dashboard-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+    background-color: #2d4956;
+    color: white;
+    grid-area: 2 / 1 / 6 / 2; 
+
+}

@@ -1,0 +1,9 @@
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1a4549;
+    color: white;
+    grid-area: 1 / 1 / 2 / 6;
+}
