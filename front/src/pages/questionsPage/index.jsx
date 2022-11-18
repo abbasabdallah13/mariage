@@ -163,26 +163,25 @@ const Home = () => {
         );
         break;
       case "array":
-        setAnswerOptions(
-          <div>
-            <button onClick={addInput}>ADD</button>
-            {arr.map((item, i) => {
-              return (
-                <input
-                  key={i}
-                  id={i}
-                  type={item.type}
-                  name={item.name}
-                  placeholder={item.placeholder}
-                  onChange={handleChange}
-                />
-              );
-            })}
-            <form onSubmit={handleSubmit}>
-              <button type="submit">Save</button>
-            </form>
-          </div>
-        );
+        setAnswerOptions();
+        // <div>
+        //   <button onClick={addInput}>ADD</button>
+        //   {arr.map((item, i) => {
+        //     return (
+        //       <input
+        //         key={i}
+        //         id={i}
+        //         type={item.type}
+        //         name={item.name}
+        //         placeholder={item.placeholder}
+        //         onChange={handleChange}
+        //       />
+        //     );
+        //   })}
+        //   <form onSubmit={handleSubmit}>
+        //     <button type="submit">Save</button>
+        //   </form>
+        // </div>
         break;
       default:
         setAnswerOptions(
@@ -251,6 +250,23 @@ const Home = () => {
             <div className="question">
               {infoList[currentQuestionIndex].question}
             </div>
+            {currentQuestionIndex === 3 && (
+              <div>
+                <button onClick={addInput}>ADD</button>
+                {arr.map((item, i) => {
+                  return (
+                    <input
+                      key={i}
+                      id={i}
+                      type={item.type}
+                      name={item.name}
+                      placeholder={item.placeholder}
+                      onChange={handleChange}
+                    />
+                  );
+                })}
+              </div>
+            )}
           </div>
           <div className="home_contents_answers">
             <div>{answerOptions}</div>
