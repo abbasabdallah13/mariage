@@ -56,7 +56,7 @@ const Login = () => {
               // autoFocus
               type='text'
               value={userName}
-              placeholder='Username'
+              placeholder="Identifiant"
               onChange={(e) => setUserName(e.target.value)}
             />
           </Form.Group>
@@ -65,13 +65,13 @@ const Login = () => {
               className=''
               type='password'
               value={password}
-              placeholder='Password'
+              placeholder='Mot de passe'
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
         </div>
         <Button block='true' size='lg' type='submit' className='glow-on-hover'>
-          Login
+          Connexion
         </Button>
       </Form>
     </>

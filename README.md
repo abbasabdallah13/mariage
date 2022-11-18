@@ -120,6 +120,7 @@ There is 2 type of guest :
 - Clean up the dependencies (i.e. tailwind, postcss etc.)
 - Sort out convention
 - we have an issue with the questions , if answer is no it should not bring to next question
+- radio oui ou non instead of yes or no
 
 ## In Progress
 
