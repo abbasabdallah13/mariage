@@ -1,20 +1,20 @@
 import { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import questionGenerator from "../utils/Questions";
+import questionGenerator from "../../utils/Questions";
 
-import Carousel from "../components/Carousel/index";
+import Carousel from "../../components/Carousel/index";
 
-import mariage1 from "../assets/mariage1.jpeg";
-import mariage2 from "../assets/mariage2.jpeg";
-import mariage3 from "../assets/mariage3.jpeg";
-import mariage4 from "../assets/mariage4.jpeg";
-import mariage5 from "../assets/mariage5.jpeg";
-import mariage6 from "../assets/mariage6.jpeg";
-import mariage7 from "../assets/mariage7.jpeg";
-import mariage8 from "../assets/mariage8.jpeg";
-import mariage9 from "../assets/mariage9.jpeg";
+import mariage1 from "../../assets/mariage1.jpeg";
+import mariage2 from "../../assets/mariage2.jpeg";
+import mariage3 from "../../assets/mariage3.jpeg";
+import mariage4 from "../../assets/mariage4.jpeg";
+import mariage5 from "../../assets/mariage5.jpeg";
+import mariage6 from "../../assets/mariage6.jpeg";
+import mariage7 from "../../assets/mariage7.jpeg";
+import mariage8 from "../../assets/mariage8.jpeg";
+import mariage9 from "../../assets/mariage9.jpeg";
 
-import "./Home.scss";
+import "./index.scss";
 
 const Home = () => {
   // Before generate states, I had to bring localStorage infos into the Home component.
