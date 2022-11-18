@@ -37,10 +37,8 @@ const Home = () => {
   const [answerOptions, setAnswerOptions] = useState("");
   const [answer, setAnswer] = useState("");
   const [answerForArray, setAnswerForArray] = useState({
-    kid1: "",
-    kid2: "",
-    kid3: "",
-    kid4: "",
+    name: "",
+    age: "",
   });
 
   const navigate = useNavigate();
@@ -98,6 +96,56 @@ const Home = () => {
     [questionQuestion.answerType, answerForArray]
   );
 
+  const inputArr = [
+    {
+      type: "text",
+      id: 1,
+      name: "nom",
+      placeholder: "Nom",
+    },
+    {
+      type: "number",
+      id: 2,
+      name: "age",
+      placeholder: "Age",
+    },
+  ];
+
+  const [arr, setArr] = useState(inputArr);
+
+  const addInput = () => {
+    setArr((s) => {
+      const lastId = s[s.length - 1].id;
+      return [
+        ...s,
+        {
+          type: "text",
+          id: 1,
+          name: "name",
+          placeholder: "Name",
+        },
+        {
+          type: "number",
+          id: 2,
+          name: "age",
+          placeholder: "Age",
+        },
+      ];
+    });
+  };
+
+  const handleChange = (e) => {
+    e.preventDefault();
+
+    const index = e.target.id;
+    setArr((s) => {
+      const newArr = s.slice();
+      newArr[index].value = e.target.value;
+
+      return newArr;
+    });
+  };
+
   useEffect(() => {
     !localUserName && navigate("/");
 
@@ -115,35 +163,25 @@ const Home = () => {
         );
         break;
       case "array":
-        setAnswerOptions(
-          <form onSubmit={handleSubmit}>
-            <input
-              placeholder="type here"
-              name="kid1"
-              value={answerForArray.kid1}
-              onChange={handleOptionChange}
-            ></input>
-            <input
-              placeholder="type here"
-              name="kid2"
-              value={answerForArray.kid2}
-              onChange={handleOptionChange}
-            ></input>
-            <input
-              placeholder="type here"
-              name="kid3"
-              value={answerForArray.kid3}
-              onChange={handleOptionChange}
-            ></input>
-            <input
-              placeholder="type here"
-              name="kid4"
-              value={answerForArray.kid4}
-              onChange={handleOptionChange}
-            ></input>
-            <button type="submit">Save</button>
-          </form>
-        );
+        setAnswerOptions();
+        // <div>
+        //   <button onClick={addInput}>ADD</button>
+        //   {arr.map((item, i) => {
+        //     return (
+        //       <input
+        //         key={i}
+        //         id={i}
+        //         type={item.type}
+        //         name={item.name}
+        //         placeholder={item.placeholder}
+        //         onChange={handleChange}
+        //       />
+        //     );
+        //   })}
+        //   <form onSubmit={handleSubmit}>
+        //     <button type="submit">Save</button>
+        //   </form>
+        // </div>
         break;
       default:
         setAnswerOptions(
@@ -190,30 +228,47 @@ const Home = () => {
   console.log("updated list : ", infoList);
 
   return (
-    <div className='home'>
-      <div className='home_carousel'>
+    <div className="home">
+      <div className="home_carousel">
         <Carousel>
-          <img src={mariage1} alt='placeholder' />
-          <img src={mariage2} alt='placeholder' />
-          <img src={mariage3} alt='placeholder' />
-          <img src={mariage4} alt='placeholder' />
-          <img src={mariage5} alt='placeholder' />
-          <img src={mariage6} alt='placeholder' />
-          <img src={mariage7} alt='placeholder' />
-          <img src={mariage8} alt='placeholder' />
-          <img src={mariage9} alt='placeholder' />
+          <img src={mariage1} alt="placeholder" />
+          <img src={mariage2} alt="placeholder" />
+          <img src={mariage3} alt="placeholder" />
+          <img src={mariage4} alt="placeholder" />
+          <img src={mariage5} alt="placeholder" />
+          <img src={mariage6} alt="placeholder" />
+          <img src={mariage7} alt="placeholder" />
+          <img src={mariage8} alt="placeholder" />
+          <img src={mariage9} alt="placeholder" />
         </Carousel>
-        <div className='home_contents'>
+        <div className="home_contents">
           <h1>Bonjour {localFirstName}</h1>
-          <div className='home_contents_questions'>
-            <div className='question-count'>
+          <div className="home_contents_questions">
+            <div className="question-count">
               Question {currentQuestionIndex + 1} / {infoList.length}
             </div>
-            <div className='question'>
+            <div className="question">
               {infoList[currentQuestionIndex].question}
             </div>
+            {currentQuestionIndex === 3 && (
+              <div>
+                <button onClick={addInput}>ADD</button>
+                {arr.map((item, i) => {
+                  return (
+                    <input
+                      key={i}
+                      id={i}
+                      type={item.type}
+                      name={item.name}
+                      placeholder={item.placeholder}
+                      onChange={handleChange}
+                    />
+                  );
+                })}
+              </div>
+            )}
           </div>
-          <div className='home_contents_answers'>
+          <div className="home_contents_answers">
             <div>{answerOptions}</div>
           </div>
         </div>
