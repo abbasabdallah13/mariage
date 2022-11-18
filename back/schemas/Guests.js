@@ -17,20 +17,12 @@ export default {
     {
       name: 'userName',
       title: 'UserName',
-      type: 'slug',
-      options: {
-        source: (doc) =>
-          lastName ? doc.firstName + ' ' + doc.lastName : doc.firstName,
-        maxLength: 96,
-      },
+      type: 'string',
     },
     {
       name: 'password',
       title: 'Password',
-      type: 'slug',
-      options: {
-        source: (doc) => doc.firstName + new Date().getTime(),
-      },
+      type: 'string',
     },
     {
       name: 'childrens',
@@ -45,11 +37,6 @@ export default {
     {
       name: 'reception',
       title: 'Reception',
-      type: 'boolean',
-    },
-    {
-      name: 'wineReception',
-      title: 'Wine Reception',
       type: 'boolean',
     },
     {
