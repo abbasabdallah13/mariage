@@ -10,7 +10,7 @@ const LoginPage = () => {
       <div className='loginPage_Description'>
         <h1>Save the date</h1>
         <p>
-          Maëva & Julien sont impatients de célébrer leurs mariage à vos côtés
+          Maëva & Julien sont impatients de célébrer leur mariage à vos côtés
           le samedi 20 mai 2023. En attendant de pouvoir communiquer tous les
           détails, nous vous invitons à répondre au préalable à quelques
           questions.
