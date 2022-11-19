@@ -20,9 +20,9 @@ const Login = () => {
     let guest = guests.find(
       (g) =>
         g.userName !== null &&
-        g.userName.current === userName &&
+        g.userName === userName &&
         g.password !== null &&
-        g.password.current === password
+        g.password === password
     );
 
     if (guest) {
@@ -32,7 +32,7 @@ const Login = () => {
             localStorage.setItem(info, true);
             break;
           case 'userName':
-            localStorage.setItem(info, guest[info].current);
+            localStorage.setItem(info, guest[info]);
             break;
           default:
             localStorage.setItem(info, guest[info]);

@@ -5,42 +5,45 @@ const questionGenerator = (reception, partner, children) => {
     {
       name: 'reception',
       section: 'attendingQuestion',
-      question: 'Seras-tu présent(e) à notre mariage ?', //Will you be attending the wedding?
+      question: 'Will you be attending the wedding?', //Seras-tu présent(e) à notre mariage ?
       answerType: 'boolean',
-    },
+    },// guest 1 and 2 get this question
     {
       name: 'wineReception',
       section: 'attendingQuestion',
-      question: "Seras-tu présent(e) à notre vin d'honneur ?", //Will you be attending the wine reception?
+      question: "Will you be attending the wine reception?", //Seras-tu présent(e) à notre vin d'honneur ?
       answerType: 'boolean',
-    },
+    },// guest 1 and 2 get this question
   ];
 
   const partnerQuestion = [
     {
       name: 'partner',
       section: 'partnerQuestion',
-      question: `Viens-tu avec ${partner} ?`, //Are you coming with ${partner} ?
+      question: `Are you coming with ${partner} ?`, //Viens-tu avec ${partner} ?
       answerType: 'boolean',
-    },
+    }, // guest 1 and 2 get this question
   ];
 
   const childrensQuestion = [
     {
       name: 'childrens',
       section: 'childrensQuestion',
-      question: 'Et ton/tes enfant(s) ?', //Are you coming with children ?
-      answerType: 'boolean',
-    },
+      question: 'Are you coming with children ?', //Et ton/tes enfant(s) ?
+      answerType: 'boolean', 
+    }, // guest 1 and 2 get this question
     {
       name: 'childrens',
       section: 'childrensQuestionDetails',
-      question: 'Rapelle-nous son prénom et son âge ?', //Please specify the number of children
+      question: 'Please specify the age and name ?', //Rapelle-nous son prénom et son âge ?
       answerType: 'array',
-    },
+    },  // guest 1 and 2 get this question
   ];
 
-  
+ 
+  // guest 2 get the ending message
+
+  // guest 1 keep going to the next question
   // make a text before next question saying 
   // that you are able to stay overnight (depending on guest )
   // description of the place and price 
@@ -54,11 +57,10 @@ const questionGenerator = (reception, partner, children) => {
       answerType: 'boolean',
     },
 
-    // 
     {
       name: 'accommodation2night',
       section: 'stayingQuestion',
-      question: 'Souhaites-tu dormir sur place (76€/prs tant une que deux nuits) ?', //Do you want to stay overnight on Saturday night? (76€/prs for 2 nights same price )
+      question: 'Souhaites-tu dormir sur place (76€/prs tant une que deux nuits) ?', //Do you want to stay overnight on Saturday night and friday night? (76€/prs for 2 nights same price )
       answerType: 'boolean', // make 3 options : saturday , friday or both
     },
   ];
